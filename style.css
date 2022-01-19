@@ -1,0 +1,139 @@
+
+body {
+    background-color: white;
+    margin: 0px;
+}
+
+
+
+
+/* ┏┳┓┏━╸┏┓╻╻ ╻   ┏━┓╺┳╸╻ ╻╻  ┏━╸ */
+/* ┃┃┃┣╸ ┃┗┫┃ ┃   ┗━┓ ┃ ┗┳┛┃  ┣╸  */
+/* ╹ ╹┗━╸╹ ╹┗━┛   ┗━┛ ╹  ╹ ┗━╸┗━╸ */
+
+/* container for the header menu */
+div#header_menu {
+    display: block;
+    position: absolute;
+}
+
+div#header_menu>nav {
+    width: 100%;
+    margin: -10 auto;
+    background-color: lightblue;
+    color: white;
+    position: fixed;
+    top: 0px;
+}
+
+div#header_menu>nav>ul {
+    list-style-type: none;
+}
+
+div#header_menu>nav>ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+div#header_menu>nav>ul>li {
+    float: left;
+    width: 24%;
+    text-align: center;
+    position: relative;
+}
+
+
+/* ⡷⢾ ⣏⡉ ⡷⣸ ⡇⢸   ⡇ ⢹⠁ ⣏⡉ ⡷⢾ ⢎⡑ */
+/* ⠇⠸ ⠧⠤ ⠇⠹ ⠣⠜   ⠇ ⠸  ⠧⠤ ⠇⠸ ⠢⠜ */
+
+div#header_menu>nav>ul>li.menu_item>a {
+    font-size: 20px;
+    text-decoration: none; /* the underline is done with a border */
+
+    /* make a border underline */
+    padding: 4px;
+    border-bottom: solid 3px;
+    /* these colors change on :hover */
+    color: midnightblue;
+    border-bottom-color: midnightblue;
+}
+
+div#header_menu>nav>ul>li.menu_item>a:hover {
+    color: cornflowerblue;
+    border-bottom-color: cornflowerblue;
+    transition-duration: 0.3s;
+}
+
+
+/* ⣎⣱ ⣏⡱ ⣏⡱ ⣏⡉ ⣎⣱ ⣏⡱ ⡇ ⡷⣸ ⡎⠑   ⡷⢾ ⣏⡉ ⡷⣸ ⡇⢸ */
+/* ⠇⠸ ⠇  ⠇  ⠧⠤ ⠇⠸ ⠇⠱ ⠇ ⠇⠹ ⠣⠝   ⠇⠸ ⠧⠤ ⠇⠹ ⠣⠜ */
+
+li#appearing_menu {
+    color: darkred;
+}
+
+li#appearing_menu:hover {
+    color: darkorange;
+}
+
+/* link (and text) in appearing menu */
+li#appearing_menu>a {
+    text-decoration: none;
+    font-size: 20px;
+
+    /* make a border underline */
+    padding: 4px;
+    border-bottom: solid 3px;
+    /* these colors change on :hover */
+    color: midnightblue;
+    border-bottom-color: midnightblue;
+}
+
+/* after the appearing menu title */
+li#appearing_menu>a::after {
+    color: inherit;
+    content: "▼";
+}
+
+/* appearing menu items */
+li#appearing_menu>ul>li {
+    display: none; /* IMPORTANT! they appear only whe li#appearing_menu:hover */
+    text-align: left;
+    margin-left: 20%;
+    padding: 3%;
+}
+
+/* make appearing menu items to appear on menu hover */
+li#appearing_menu:hover>ul>li {
+    display: block;
+    transition-duration: 0.3s;
+}
+
+/* links in appearing menu items */
+li#appearing_menu>ul>li>a {
+    color: darkred;
+    text-decoration: none;
+}
+
+li#appearing_menu>ul>li:hover {
+    background-color: lightgray;
+}
+
+
+
+
+
+/* ╺┳╸┏━╸╻ ╻╺┳╸   ┏━┓╺┳╸╻ ╻╻  ┏━╸ */
+/*  ┃ ┣╸ ┏╋┛ ┃    ┗━┓ ┃ ┗┳┛┃  ┣╸  */
+/*  ╹ ┗━╸╹ ╹ ╹    ┗━┛ ╹  ╹ ┗━╸┗━╸ */
+
+div.text_container {
+    color: black;
+    margin-left: 5%;
+}
+
+
+
+
+
