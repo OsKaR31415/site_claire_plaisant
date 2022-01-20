@@ -2,6 +2,7 @@
 body {
     background-color: white;
     margin: 0px;
+    font-family: helvetica, arial, sans-serif;
 }
 
 
@@ -15,8 +16,10 @@ body {
 div#header_menu {
     display: block;
     position: absolute;
+    font-family: helvetica, arial, sans-serif;
 }
 
+/* header menu nav */
 div#header_menu>nav {
     width: 100%;
     margin: -10 auto;
@@ -28,10 +31,10 @@ div#header_menu>nav {
 
 div#header_menu>nav>ul {
     list-style-type: none;
+    margin-bottom: 0px;
 }
 
 div#header_menu>nav>ul::after {
-    content: "";
     display: table;
     clear: both;
 }
@@ -47,22 +50,28 @@ div#header_menu>nav>ul>li {
 /* ⡷⢾ ⣏⡉ ⡷⣸ ⡇⢸   ⡇ ⢹⠁ ⣏⡉ ⡷⢾ ⢎⡑ */
 /* ⠇⠸ ⠧⠤ ⠇⠹ ⠣⠜   ⠇ ⠸  ⠧⠤ ⠇⠸ ⠢⠜ */
 
-div#header_menu>nav>ul>li.menu_item>a {
-    font-size: 20px;
-    text-decoration: none; /* the underline is done with a border */
+div#header_menu>nav>ul>li.menu_item {
+    color: black;
+    height: 30px;
 
-    /* make a border underline */
-    padding: 4px;
-    border-bottom: solid 3px;
-    /* these colors change on :hover */
-    color: midnightblue;
-    border-bottom-color: midnightblue;
+    padding-top: 10px;
+    margin-top: -10px; /* so the menu isn't shifted down */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-div#header_menu>nav>ul>li.menu_item>a:hover {
-    color: cornflowerblue;
-    border-bottom-color: cornflowerblue;
+div#header_menu>nav>ul>li.menu_item:hover {
+    background-color: steelblue;
     transition-duration: 0.3s;
+}
+
+div#header_menu>nav>ul>li.menu_item>a {
+    font-size: 20px;
+    text-decoration: none;
+    padding: 4px;
+    color: inherit;
+    background-color: inherit;
+    padding: 0px;
 }
 
 
@@ -71,6 +80,7 @@ div#header_menu>nav>ul>li.menu_item>a:hover {
 
 li#appearing_menu {
     color: darkred;
+    height: 30px;
 }
 
 li#appearing_menu:hover {
@@ -79,32 +89,58 @@ li#appearing_menu:hover {
 
 /* link (and text) in appearing menu */
 li#appearing_menu>a {
+    display: block; 
     text-decoration: none;
     font-size: 20px;
 
-    /* make a border underline */
-    padding: 4px;
-    border-bottom: solid 3px;
-    /* these colors change on :hover */
-    color: midnightblue;
-    border-bottom-color: midnightblue;
+    margin-top: -10px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    color: black;
+
+    background-color: lightblue;
+    /* height: 40px; */
+}
+
+/* appearing menu title (link) when hover */
+li#appearing_menu>a:hover {
+    background-color: steelblue;
+    transition-duration: 0.3s;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 /* after the appearing menu title */
 li#appearing_menu>a::after {
     color: inherit;
-    content: "▼";
+    content: "";
 }
 
-/* appearing menu items */
+
+/* appearing menu list container (ul) */
+li#appearing_menu>ul {
+    margin-top: -10px;
+    padding: 10px;
+}
+
+/* appearing menu items (li) */
 li#appearing_menu>ul>li {
     display: none; /* IMPORTANT! they appear only whe li#appearing_menu:hover */
     text-align: left;
-    margin-left: 20%;
+    /* margin-left: 10px; */
     padding: 3%;
+    position: relative;
+    background-color: lightblue;
+    border: solid 1px black;
+}
+
+/* appearing menu items when hover */
+li#appearing_menu>ul>li:hover {
+    background-color: steelblue;
 }
 
 /* make appearing menu items to appear on menu hover */
+/* note that the hover is on the li#appearing_menu, not the items themselves */
 li#appearing_menu:hover>ul>li {
     display: block;
     transition-duration: 0.3s;
@@ -116,11 +152,10 @@ li#appearing_menu>ul>li>a {
     text-decoration: none;
 }
 
-li#appearing_menu>ul>li:hover {
-    background-color: lightgray;
+/* vertical spacing */
+li#appearing_menu>ul>br {
+    height: 0px;
 }
-
-
 
 
 
